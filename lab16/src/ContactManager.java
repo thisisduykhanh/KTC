@@ -22,15 +22,15 @@ public class ContactManager {
     }
 
     public void searchContactById() {
-        System.out.print("Nhap id lien lac can tim: ");
-        int id = new Scanner(System.in).nextInt();
+        System.out.print("Nhap so dien thoai lien lac can tim: ");
+        String phone = new Scanner(System.in).nextLine();
         for (Contact contact : contacts) {
-            if (contact.getId() == id) {
+            if (contact.getPhone().equals(phone)) {
                 System.out.println(contact);
                 return;
             }
         }
-        System.out.println("Khong tim thay lien lac voi ma: " + id);
+        System.out.println("Khong tim thay lien lac voi so dien thoai: " + phone);
 
     }
 
@@ -44,6 +44,11 @@ public class ContactManager {
         String email = scanner.nextLine();
         System.out.print("Nhap dia chi: ");
         String address = scanner.nextLine();
+
+        if (name.isEmpty() || phone.isEmpty() || email.isEmpty() || address.isEmpty()) {
+            System.out.println("Thong tin lien lac khong duoc de trong.");
+            return;
+        }
 
         Contact contact = new Contact(nextId++, name, phone, email, address);
         contacts.add(contact);

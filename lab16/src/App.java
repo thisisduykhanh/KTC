@@ -11,7 +11,7 @@ public class App {
 
     public void displayMenu() {
         System.out.print(
-                "CHUONG TRINH QUAN LY DANH BA\n1. Hien thi danh sach lien lac\n2. Tim kiem lien lac theo ma lien lac\n3. Them moi lien lac\n4. Sua thong tin lien lac\n5. Xoa thong tin lien lac\nMoi ban chon chuc nang [1->5] hoac nhan phim khac de thoat: ");
+                "CHUONG TRINH QUAN LY DANH BA\n1. Hien thi danh sach lien lac\n2. Tim kiem lien lac theo so dien thoai\n3. Them moi lien lac\n4. Sua thong tin lien lac\n5. Xoa thong tin lien lac\nMoi ban chon chuc nang [1->5] hoac nhan phim khac de thoat: ");
     }
 
     public void handleUserChoice(String choice) {
